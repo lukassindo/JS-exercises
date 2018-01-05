@@ -9,4 +9,4 @@ if (allNames.indexOf(newName) === -1) {
 }
 
 console.log(allNames);
-console.log('number of items: ' + x)
+console.log('number of items: ' + x);

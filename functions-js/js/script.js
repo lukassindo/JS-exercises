@@ -6,7 +6,7 @@ function drawTree(height) {
 			var star = star += '*'; 
 		}
 		for (k = 0; k < (height - i); k++) {
-				var star = 'o'+star;
+				var star = ' '+star;
 			}
 		console.log(star);
 	}	

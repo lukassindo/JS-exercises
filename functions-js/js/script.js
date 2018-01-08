@@ -1,14 +1,16 @@
 
 function drawTree(height) {
-	for (i = 0; i < height; i++) {
+	for (var i = 0; i < height; i++) {
 		var star = ' ';
-		for (j = 0; j < i + 1; j++) {
-			var star = star += '*'; 
+		for (var j = 0; j < i + 1; j++) {
+			star += '* '; 
 		}
-		for (k = 0; k < (height - i); k++) {
-				var star = ' ' + star;
+		for (var k = 0; k < (height - i); k++) {
+			star = ' ' + star;
 			}
 		console.log(star);
 	}	
 		
 }
+
+drawTree(8);

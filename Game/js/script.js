@@ -31,13 +31,7 @@ function setGameElements() {
         pickElem.style.display = 'block';
         resultsElem.style.display = 'block';
       break;
-    case 'ended':
-    	if (player.score > 9) {
-    		newGameBtn.innerText = player.name +' is a WINNER! One more time!';
-    	} else if (computer.score > 9) {
-    		newGameBtn.innerText = 'Computer is a WINNER! One more time!';
-    	}
-        
+    	
     case 'notStarted':
     default:
         newGameElem.style.display = 'block';
@@ -113,12 +107,20 @@ function checkRoundWinner(playerPick, computerPick) {
     }
     
     setGamePoints();
+    endGame();
 
-    if ((player.score > 9) || (computer.score > 9)) {
-    	gameState = 'ended';
-    	setGameElements();
-    }
-    
+    function endGame() {
+    	if (player.score > 9) {
+    		newGameBtn.innerText = player.name +' is a WINNER! One more time!';
+    		gameState = 'notStarted';
+    	    setGameElements();
+    	} else if (computer.score > 9) {
+    		newGameBtn.innerText = 'Computer is a WINNER! One more time!';
+    		gameState = 'notStarted';
+    	    setGameElements();
+    	}
+    	
+    }     
 }
 
 function setGamePoints() {

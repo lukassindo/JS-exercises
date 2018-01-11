@@ -1,3 +1,61 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
 .container {
 	padding: 2em;
+	width: 100%;
 }
+
+.background {
+	background-image: url('https://static.pexels.com/photos/591652/play-fun-blocks-block-591652.jpeg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% 100%;
+	height: 100vh;
+}
+
+.tooltip-inner {
+	width: 150px;
+	height: 100px;
+	overflow: hidden;
+	padding: 0;
+}
+
+.game-title {
+	margin-top: 2em;
+}
+
+.game-title span {
+	font-size: 2em;
+	margin: 0 0.5em;
+}
+
+#js-resultsTableElement {
+	font-size: 3em;
+	font-family: 'Amatic SC', cursive;
+	font-weight: 700;
+	letter-spacing: 0.2em;
+}
+
+h3 {
+	font-family: 'Amatic SC', cursive;
+	font-size: 3em;
+	font-weight: 700;
+}
+
+.btn-success {
+	height: 4em;
+	width: auto;
+	font-size: 1.5em;
+	border: 2px solid red;
+}
+
+.badge {
+	font-size: 1em !important;
+}
+
+
+
+

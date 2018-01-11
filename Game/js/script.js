@@ -2,6 +2,11 @@ var newGameBtn = document.getElementById('js-newGameButton');
 
 newGameBtn.addEventListener('click', newGame);
 
+$('span[data-toggle="tooltip"]').tooltip({
+    animated: 'fade',
+    placement: 'bottom',
+    html: true,
+});
 
 var pickRock = document.getElementById('js-playerPick_rock'),
     pickPaper = document.getElementById('js-playerPick_paper'),
@@ -58,9 +63,6 @@ function newGame() {
   }
 }
 
-
-
-
 function getComputerPick() {
     var possiblePicks = ['rock', 'paper', 'scissors'];
     return possiblePicks[Math.floor(Math.random()*3)];
@@ -107,21 +109,20 @@ function checkRoundWinner(playerPick, computerPick) {
     }
     
     setGamePoints();
-    endGame();
-
-    function endGame() {
-    	if (player.score > 9) {
-    		newGameBtn.innerText = player.name +' is a WINNER! One more time!';
-    		gameState = 'notStarted';
-    	    setGameElements();
-    	} else if (computer.score > 9) {
-    		newGameBtn.innerText = 'Computer is a WINNER! One more time!';
-    		gameState = 'notStarted';
-    	    setGameElements();
-    	}
-    	
-    }     
+    endGame(); 
 }
+
+function endGame() {
+    if (player.score > 9) {
+        newGameBtn.innerText = player.name +' is a WINNER! One more time!';
+        gameState = 'notStarted';
+        setGameElements();
+    } else if (computer.score > 9) {
+        newGameBtn.innerText = 'Computer is a WINNER! One more time!';
+        gameState = 'notStarted';
+        setGameElements();
+    }
+}    
 
 function setGamePoints() {
     playerPointsElem.innerHTML = player.score;

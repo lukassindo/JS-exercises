@@ -10,7 +10,9 @@ $(function(){
 	console.log(numberOfSlides);
 
 	
-	setInterval(changeSlide, 3000);
+	var interval = setInterval(changeSlide, 3000);
+	
+
 	function changeSlide(){
 		carouselList.animate({'margin-left': -500}, 500, moveFirstSlide);
 		
@@ -31,5 +33,25 @@ $(function(){
 			$('.control-dot').removeClass('active').eq(currentPosition).addClass('active');
 		}
 	}
+
+
+	$('.next').click(function(){
+	    clearInterval(interval);
+	    changeSlide();
+	});
+
+	function moveLastSlide() {
+		var firstItem = carouselList.find("li:first");
+		var lastItem = carouselList.find("li:last");
+		lastItem.after(firstItem);
+		carouselList.css({marginLeft:-500});
+	}
+
+	$('.prev').click(function(){
+		clearInterval(interval);
+		moveLastSlide();
+		carouselList.animate({'margin-left': 0}, 500);
+	});
+
 });
 

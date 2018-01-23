@@ -32,6 +32,13 @@ nokiaLumia630.printInfo();
 samsungGalaxyS6.priceLevel();
 onePlusOne.priceLevel();
 
+var prices = [samsungGalaxyS6.price, iPhone6S.price, onePlusOne.price, huaweiP9.price, nokiaLumia630.price];
+
+console.log("The most expensive phone costs " + Math.max.apply(null, prices));
+
+
+
+
 
 
 

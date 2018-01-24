@@ -43,7 +43,7 @@ $(function(){
 	function moveLastSlide() {
 		var firstItem = carouselList.find("li:first");
 		var lastItem = carouselList.find("li:last");
-		lastItem.after(firstItem);
+		firstItem.before(lastItem);
 		carouselList.css({marginLeft:-500});
 	}
 

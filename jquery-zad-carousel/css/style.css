@@ -10,12 +10,12 @@ body {
 }
 
 #carousel {
-    width: 500px;
-    height: 400px;
-    margin: 0 auto;
-    position: relative;
-    top: calc(50% - 200px);
-    overflow: hidden;  
+	width: 500px;
+	height: 400px;
+	margin: 0 auto;
+	position: relative;
+	top: calc(50% - 200px);
+	overflow: hidden;  
 }
 
 #carousel ul {

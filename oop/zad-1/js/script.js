@@ -5,15 +5,15 @@ function Phone(brand, price, color) {
 }
 
 Phone.prototype.printInfo = function() {
-		console.log("The phone brand is " + this.brand + ", color is " + this.color + " and the price is " + this.price + ".");
+	console.log("The phone brand is " + this.brand + ", color is " + this.color + " and the price is " + this.price + ".");
 }
 
 Phone.prototype.priceLevel = function() {
 	if (this.price > 1000) {
 		console.log("The price of " + this.brand + " is bigger than 1000");
 	} else {
-			console.log("The price of " + this.brand + " is smaller than 1000");
-		}
+		console.log("The price of " + this.brand + " is smaller than 1000");
+	}
 }
 
 

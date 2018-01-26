@@ -1,0 +1,106 @@
+body {
+	margin: 0;
+	background: #00b3b3;
+	font-family: 'Neuton', serif;
+}
+
+.board {
+	width: 100%;
+	text-align: center;
+}
+
+h1 {
+	font-stretch: expanded;
+	font-weight: bold;
+	margin-top: 1em;
+	text-align: center;
+	color: #082A77;
+	letter-spacing: 0.1em;
+	font-size: 3em;
+}
+
+
+.red, .blue {
+	position: relative;
+	bottom: 0.1em;
+}
+
+.blue {
+	color: #082A77; 
+	position: relative;
+	bottom: 0.1em;
+}
+
+.red {
+	color: #E30000;
+}
+
+.blue:hover, .red:hover {
+	position: initial;
+	cursor: pointer;
+}
+
+
+.up:hover {
+	position: relative;
+	bottom: 0.1em;
+	cursor: pointer;
+}
+
+.btn-success {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1em;
+}
+
+.column-container {
+	margin-top: 2em;
+	display: inline-block;
+}
+
+.column {
+	border-radius: 5px;
+	text-align: center;
+}
+
+.column:first child {
+	font-weight: bold;
+	font-size: 2em;
+}
+
+.well {
+	background: #4CC6C6;
+}
+
+
+.column-card-list {
+	margin-top: 1em;
+	min-height: 2em;
+	margin-right: 0.5em;
+}
+
+.column-card-list li {
+	list-style-type: upper-roman;
+	display: flex;
+	align-items: center;
+
+}
+
+.card p {
+	font-family: font-family: 'Neuton', serif;
+	font-size: 1.5em;
+	margin-left: 1em;
+}
+
+.btn-card {
+	border: 0;
+	background: #4CC6C6;
+	margin-bottom: 0.4em;
+}
+
+.btn-card:hover {
+	background: none;
+}
+
+

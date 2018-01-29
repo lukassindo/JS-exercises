@@ -56,39 +56,37 @@ h1 {
 
 .column-container {
 	margin-top: 2em;
-	display: inline-block;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .column {
 	border-radius: 5px;
 	text-align: center;
-}
-
-.column:first child {
-	font-weight: bold;
-	font-size: 2em;
-}
-
-.well {
+	display: inline-block;
+	min-height: 300px;
+	min-width: 400px;
+	padding: 19px;
+	margin-bottom: 20px;
+	border: 1px solid #e3e3e3;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+	margin: 0 0.5em 20px 0.5em;
 	background: #4CC6C6;
 }
 
-
 .column-card-list {
 	margin-top: 1em;
-	min-height: 2em;
-	margin-right: 0.5em;
 }
 
 .column-card-list li {
-	list-style-type: upper-roman;
 	display: flex;
 	align-items: center;
-
 }
 
 .card p {
-	font-family: font-family: 'Neuton', serif;
+	font-family: 'Neuton', serif;
 	font-size: 1.5em;
 	margin-left: 1em;
 }

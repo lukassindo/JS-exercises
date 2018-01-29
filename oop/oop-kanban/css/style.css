@@ -78,6 +78,13 @@ h1 {
 
 .column-card-list {
 	margin-top: 1em;
+	min-height: 2em;
+}
+
+.card-placeholder {
+	background: #75DCDC;
+	min-height: 2em;
+	border-radius: 3px;
 }
 
 .column-card-list li {

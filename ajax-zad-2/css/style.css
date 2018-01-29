@@ -1,0 +1,41 @@
+body {
+	margin: 0;
+	background: #809fff;
+	color: white;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 2em;
+}
+
+.box {
+	text-align: center;
+}
+
+.button-box {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 2em;
+}
+
+.btn {
+	margin-bottom: 1em;
+	width: 10em;
+	background: #809fff;
+	color: white;
+}
+
+.btn:focus {
+	background: #809fff;
+	border: 1px solid white;
+	color: white;
+}
+
+.tweet {
+	text-decoration: none;
+}
+

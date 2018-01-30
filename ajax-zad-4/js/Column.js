@@ -22,17 +22,17 @@ function Column(id,name) {
 			var cardName = prompt("Enter the name of the card");
 			event.preventDefault();
 			$.ajax({
-        		url: baseUrl + '/card',
-        		method: 'POST',
-        		data: {
-                	name: cardName,
-    				bootcamp_kanban_column_id: self.id
-        		},
-        		success: function(response) {
-            		var card = new Card(response.id, cardName);
-        			self.createCard(card);
-        		}
-    		});
+				url: baseUrl + '/card',
+				method: 'POST',
+				data: {
+					name: cardName,
+					bootcamp_kanban_column_id: self.id
+				},
+				success: function(response) {
+					var card = new Card(response.id, cardName);
+					self.createCard(card);
+				}
+			});
 		});
 			
 			// KONSTRUOWANIE ELEMENTU KOLUMNY
@@ -45,17 +45,17 @@ function Column(id,name) {
 	}
 Column.prototype = {
 	createCard: function(card) {
-	  this.element.children('ul').append(card.element);
+		this.element.children('ul').append(card.element);
 	},
 
 	deleteColumn: function() {
-	   var self = this;
-       $.ajax({
-       	    url: baseUrl + '/column/' + self.id,
-      	    method: 'DELETE',
-            success: function(response){
-            self.element.remove();
-        	}
-        });
+		var self = this;
+		$.ajax({
+			url: baseUrl + '/column/' + self.id,
+			method: 'DELETE',
+			success: function(response){
+			self.element.remove();
+			}
+		});
 	}
 };
